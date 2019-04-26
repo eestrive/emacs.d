@@ -19,3 +19,5 @@
 (windmove-default-keybindings)
 ;;窗口主题
 (load-theme 'wombat)
+;; max size window
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
