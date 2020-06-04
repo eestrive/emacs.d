@@ -9,3 +9,8 @@
 
 # Undo-tree save-files
 *.~undo-tree
+
+elpa
+eshell/
+ido.last
+pyim/

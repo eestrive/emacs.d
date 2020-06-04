@@ -1,5 +1,7 @@
 ;; -*- coding: utf-8 -*-
 
+;; 按键异常声音忽略
+(setq ring-bell-function 'ignore)
 (package-initialize)
 (push (expand-file-name "~/.emacs.d/lisp") load-path)
 
@@ -18,13 +20,16 @@
 (windmove-default-keybindings)
 (load-theme 'wombat)
 ;;(load-theme 'solarized t)
-;; max size window
+;; 设置最大窗口
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(require 'pyim)
-(pyim-basedict-enable)   ; 拼音词库
-(setq default-input-method "pyim")
+
+(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+
 
 (require 'init-cc-mode)
+(require 'init-chinese-mode)
+
+
+
