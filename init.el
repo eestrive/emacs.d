@@ -25,22 +25,9 @@
 
 (require 'init-elpa)
 (require 'init-cc-mode)
-(require 'init-chinese-mode)
+;; (require 'init-chinese-mode)
 
 ;; yasnippet, 模板皮匹配插件
 (require 'yasnippet)
 (yas-global-mode 1)
 
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (helm pyim xr popup async))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

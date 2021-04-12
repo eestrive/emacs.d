@@ -1,20 +1,7 @@
 ;; -*- coding: utf-8 -*-
 
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (pyim xr popup async))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+			 ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 ;; On-demand installation of packages
 (defun require-package (package &optional min-version no-refresh)
@@ -28,8 +15,8 @@
     (package-refresh-contents)
     (require-package package min-version t))))
 
-(require-package 'pyim)
-(require-package 'helm)
+;; (require-package 'pyim)
+;; (require-package 'helm)
 (require-package 'yasnippet)
 
 (provide 'init-elpa)
