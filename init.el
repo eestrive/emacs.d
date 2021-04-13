@@ -6,8 +6,8 @@
 (push (expand-file-name "~/.emacs.d/lisp") load-path)
 
 (menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;; (tool-bar-mode -1)
+;; (scroll-bar-mode -1)
 (column-number-mode)
 
 (show-paren-mode)
@@ -30,4 +30,8 @@
 ;; yasnippet, 模板皮匹配插件
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;; auto-complete
+(ac-config-default)
+
 

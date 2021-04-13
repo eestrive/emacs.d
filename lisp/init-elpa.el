@@ -18,5 +18,6 @@
 ;; (require-package 'pyim)
 ;; (require-package 'helm)
 (require-package 'yasnippet)
+(require-package 'auto-complete)
 
 (provide 'init-elpa)
