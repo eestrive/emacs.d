@@ -15,7 +15,8 @@
     (package-refresh-contents)
     (require-package package min-version t))))
 
-;; (require-package 'pyim)
+(require-package 'pyim-basedict)
+(require-package 'pyim)
 (require-package 'helm)
 (require-package 'yasnippet)
 (require-package 'auto-complete)
