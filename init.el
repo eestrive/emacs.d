@@ -5,7 +5,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(package-selected-packages (quote (pyim-basedict auto-complete yasnippet helm)))
+ '(package-selected-packages
+   (quote
+    (lsp-ui lsp-mode pyim posframe org-translate orgalist pyim-basedict auto-complete yasnippet helm)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -41,6 +43,7 @@
 (require 'init-elpa)
 (require 'init-cc-mode)
 (require 'init-chinese-mode)
+(require 'init-org)
 
 ;; yasnippet, 模板皮匹配插件
 (require 'yasnippet)
@@ -62,3 +65,6 @@
 (setq-default indent-tabs-mode nil)
 (setq c-basic-offset 4)
 (setq default-tab-width 4)
+
+;; lsp-mode
+;; (require 'lsp-mode)

@@ -26,5 +26,7 @@
 (require-package 'helm)
 (require-package 'yasnippet)
 (require-package 'auto-complete)
+(require-package 'lsp-mode)
+(require-package 'lsp-ui)
 
 (provide 'init-elpa)
