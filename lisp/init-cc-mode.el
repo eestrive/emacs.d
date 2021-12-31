@@ -7,6 +7,6 @@
   (c-set-offset 'substatement-open 0))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 ;; (message "load init-cc-mode: %d " 111)
-(add-hook 'c++-mode-hook #'lsp)
+;; (add-hook 'c++-mode-hook #'lsp)
 
 (provide 'init-cc-mode)

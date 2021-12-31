@@ -1,20 +1,15 @@
 ;; -*- coding: utf-8 -*-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(package-selected-packages
-   (quote
-    (lsp-ui lsp-mode pyim posframe org-translate orgalist pyim-basedict auto-complete yasnippet helm)))
- '(show-paren-mode t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 181 :width normal)))))
+
+;; (setq garbage-collection-messages t) ; for debug
+(setq best-gc-cons-threshold (* 64 1024 1024))
+(setq gc-cons-percentage 0.5)
+(run-with-idle-timer 5 t #'garbage-collect)
+
+;; all backups goto ~/.backups instead in the current directory
+(setq backup-directory-alist (quote (("." . "~/.emacs-backups"))))
+
+(setq-default auto-save-timeout 15) ; 15秒无动作,自动保存
+(setq-default auto-save-interval 100) ; 100个字符间隔, 自动保存
 
 ;; 按键异常声音忽略
 (setq ring-bell-function 'ignore)
@@ -22,8 +17,8 @@
 (push (expand-file-name "~/.emacs.d/lisp") load-path)
 
 (menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;; (tool-bar-mode -1)
+;; (scroll-bar-mode -1)
 (column-number-mode)
 (global-linum-mode t)
 
@@ -68,3 +63,16 @@
 
 ;; lsp-mode
 ;; (require 'lsp-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(lsp-ui lsp-mode auto-complete yasnippet helm posframe pyim-basedict pyim)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
