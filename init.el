@@ -8,8 +8,8 @@
 ;; all backups goto ~/.backups instead in the current directory
 (setq backup-directory-alist (quote (("." . "~/.emacs-backups"))))
 
-(setq-default auto-save-timeout 15) ; 15秒无动作,自动保存
-(setq-default auto-save-interval 100) ; 100个字符间隔, 自动保存
+;(setq-default auto-save-timeout 15) ; 15秒无动作,自动保存
+;(setq-default auto-save-interval 100) ; 100个字符间隔, 自动保存
 
 ;; 按键异常声音忽略
 (setq ring-bell-function 'ignore)
@@ -48,7 +48,7 @@
 (ac-config-default)
 
 ;; helm
-(require 'helm-config)
+(require 'helm)
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
