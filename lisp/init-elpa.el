@@ -26,7 +26,10 @@
 (require-package 'helm)
 (require-package 'yasnippet)
 (require-package 'auto-complete)
-(require-package 'lsp-mode)
-(require-package 'lsp-ui)
+;; (require-package 'lsp-mode)
+;; (require-package 'lsp-ui)
+(require-package 'find-file-in-project)
+(require-package 'flycheck)
+(require-package 'monokai-theme)
 
 (provide 'init-elpa)
