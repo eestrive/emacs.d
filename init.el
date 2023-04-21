@@ -17,10 +17,10 @@
 (push (expand-file-name "~/.emacs.d/lisp") load-path)
 
 (menu-bar-mode -1)
-;; (tool-bar-mode -1)
-;; (scroll-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 (column-number-mode)
-(global-linum-mode t)
+(global-display-line-numbers-mode t)
 
 (show-paren-mode)
 (electric-pair-mode)
@@ -39,6 +39,7 @@
 (require 'init-cc-mode)
 (require 'init-chinese-mode)
 (require 'init-org)
+;; (require 'init-env)
 
 ;; yasnippet, 模板皮匹配插件
 (require 'yasnippet)
@@ -68,6 +69,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(package-selected-packages
    '(lsp-ui lsp-mode auto-complete yasnippet helm posframe pyim-basedict pyim)))
 (custom-set-faces
@@ -75,6 +77,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Source Code Pro" :foundry "outline" :slant normal :weight normal :height 158 :width normal))))
  )
 
 
